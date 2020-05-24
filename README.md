@@ -5,59 +5,54 @@
 - [ ] Fork this repository so you have your own copy to work on.
 - [ ] Clone the repository on your local machine. 
 - [ ] Run Conda commands to create a new Conda environment for this assignment.
+- [ ] Open the repository Jupyter Notebook in Jupyter Notebooks.
 - [ ] Add the code shown in this video to your Jupyter Notebook.
 - [ ] Push your updated file to your GitHub repository.
-- [ ] Submit a link to this GitHub repository in Canvas.
+- [ ] Answer assignment questions and submit a link to this GitHub repository in Canvas.
 
 ## Fork & Clone this repository
 
 * We did this in a previous assignment. Instructions are here: https://github.com/cmcntsh/N6806_Fall2020_DevNotes/blob/master/Projects/002%20-%20Practice%20Using%20Git%20and%20GitHub/README.md
+* This can also be done directly in VSCode
+  * Create a new folder on your machine where you want to put this repository if you don't already have one you want to use.
+  * Copy the Clone or Download path for this repository from GitHub.
+  * In VSCode from the command pallette (Ctrl-Shift-P) run Git: Clone
+  * Paste the path into the path field which pops up
+  * Select your new folder you created on your machine
+  * A new folder for the repository with the repository files should be in the folder you selected showing in the Explorer window in VSCode on the left side.
 
 ## Create a new Conda environment for this assignment.
 
-* [ ] In an editor of your choice (i.e. VSCode) edit this README.md file to add the answers requested in the tables.
+* This can be done directly in VSCode
+  * Open a new terminal in VSCode.
+  * If you know the packages you will use for the project, you can install the packages at the same time you create the new environment using Conda. For this assignment we'll install the pandas and matplotlib packages.
+  * In the terminal window run the command `conda -V` to check Conda is installed and is in your path.
+  * To see a list of available Python versions run the command `conda search "^python$"`
+  * To simply create an environment using the same version of Python already installed on your machine with the packages you want run the command `conda create --name myenv` with the packages you want listed after the environment name.
+  * For this assignment I'll create an environment named dataVis with packages pandas and matplotlib and nb_conda_kernels (allows us to use the new environment with Jupyter Notebook) with command `conda create --name dataVis pandas matplotlib nb_conda_kernels`
+  * This will take a few minutes while the packages and dependencies are installed in the new environment.
+  * Verify your new environment exists by running command `conda env list`
+  * We'll be doing this assignment in a Jupyter Notebook in Anaconda. Activate your new environment by running the command `source activate dataVis`. Add the kernel for your new environment to Jupyter Notebook by running the command `python -m ipykernel install --user --name=dataVis`.
+  
+## Open the repository Jupyter Notebook
+* Open Jupyter Notebook on your machine.
+* In the Files tab you should see folders that match the folders on your machine (i.e. Desktop, Documents, Downloads). Navigate to your repository folder by clicking on the folder links. Open the .ipynb file in your repository by clicking on it.
+* When your repository workbook opens in your browser window, make sure you're using your assignment workbook with the new environment by going to Kernel - change kernel - select dataVis
+
 
 ## Follow along with this tutorial
 
-* Conda What and Why? (27 min): https://www.youtube.com/watch?v=23aQdrS58e0&list=PLG9A6ovzPqX6d9uWzx0UYN9pm0zzl5ofA&index=13&t=0s
-  * He installs Miniconda. We will be using Anaconda. Don't install Miniconda.
-  * Follow along with the rest of the tutorial.
-  * Go ahead and create the environments as he creates them in the tutorial.
+* Intro to Data Analysis (22 min): https://www.youtube.com/watch?v=a9UrKTVEeZA&list=PLG9A6ovzPqX6d9uWzx0UYN9pm0zzl5ofA&index=12
+  * Enter the code and run it in your Jupyter Notebook file.
+  * When you're done make sure you save your file.
 
-## Conda Concepts
+## Push your updated file to your GitHub repository
 
-* [ ] Describe the Conda concepts used in the video and listed in the table below.
+* This can be done in VSCode.
+  * In VSCode click on the Source Control button.
+  * You should see the files that had changes. (Mine has the original file which shows an M next to it and a new file which says checkpoint in the name. You really only need to push the original file, but if you push both it shouldn't hurt anything.)
+  * Hover over the changed file. Click the + sign to stage the change.
+  * Enter a commit message in the message field and click the checkmark to commit the change.
+  * Click on the 3 dots for more actions and select Sync. This will push the updated file to your GitHub repository.
+  * Submit the link to your GitHub repository on Canvas.
 
-|   Concept   |         Description or short answer         |
-|     ---     |                     ---                     |
-|What is the purpose of having different environments?     |(enter description or short answer here)|
-|What is the default package manager in Python?            |(enter description or short answer here)|
-|How do you manage environments and packages in Anaconda?  |(enter description or short answer here)|
-|`conda list`       |(enter description or short answer here)|
-|`conda env list`       |(enter description or short answer here)|
-|How do you keep your base environment unchanged?       |(enter description or short answer here)|
-|What is the link to the Conda cheat sheet? (link in video notes is broken)      |(enter description or short answer here)|
-|`conda create --name XXXX`       |(enter description or short answer here)|
-|`source activate XXXX`       |(enter description or short answer here)|
-|`conda install YYYY`       |(enter description or short answer here)|
-|channels in Conda       |(enter description or short answer here)|
-|`conda install -c ZZZZ YYYY`       |(enter description or short answer here)|
-|`conda config --show channels`       |(enter description or short answer here)|
-|`conda config --add channels ZZZZ`       |(enter description or short answer here)|
-|conda-forge.org       |(enter description or short answer here)|
-|`source deactivate`       |(enter description or short answer here)|
-|`conda config --get channels`       |(enter description or short answer here)|
-
-* After creating the environments he created in the video on your computer, what would the results of running the command `conda env list` look like with the da35 environment activated. Paste the output from your command prompt in the code block below.
-
-```
-#Paste your results here.
-
-
-```
-* What command would you use to remove the environments you created for this exercise from your computer?
-
-```
-#Type the command here.
-
-```
