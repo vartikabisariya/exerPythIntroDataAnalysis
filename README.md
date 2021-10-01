@@ -21,19 +21,6 @@
   * Select your new folder you created on your machine
   * A new folder for the repository with the repository files should be in the folder you selected showing in the Explorer window in VSCode on the left side.
 
-## Create a new Conda environment for this assignment.
-
-* This can be done directly in VSCode
-  * Open a new terminal in VSCode.
-  * If you know the packages you will use for the project, you can install the packages at the same time you create the new environment using Conda. For this assignment we'll install the pandas and matplotlib packages.
-  * In the terminal window run the command `conda -V` to check Conda is installed and is in your path.
-  * To see a list of available Python versions run the command `conda search "^python$"`
-  * To simply create an environment using the same version of Python already installed on your machine with the packages you want run the command `conda create --name myenv` with the packages you want listed after the environment name.
-  * For this assignment I'll create an environment named dataVis with packages pandas and matplotlib and nb_conda_kernels (allows us to use the new environment with Jupyter Notebook) with command `conda create --name dataVis pandas matplotlib nb_conda_kernels`
-  * This will take a few minutes while the packages and dependencies are installed in the new environment.
-  * Verify your new environment exists by running command `conda env list`
-  * We'll be doing this assignment in a Jupyter Notebook in Anaconda. Activate your new environment by running the command `source activate dataVis`. Add the kernel for your new environment to Jupyter Notebook by running the command `python -m ipykernel install --user --name=dataVis`.
-  
 ## Open the repository Jupyter Notebook
 * Open Jupyter Notebook on your machine.
 * In the Files tab you should see folders that match the folders on your machine (i.e. Desktop, Documents, Downloads). Navigate to your repository folder by clicking on the folder links. Open the .ipynb file in your repository by clicking on it.
